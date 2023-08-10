@@ -1,5 +1,6 @@
 import Head from "next/head";
 import NavigationBar from "./navbar";
+import Footer from "./footer";
 
 export default function Layout({ children }: { children: JSX.Element }) {
   return (
@@ -15,6 +16,7 @@ export default function Layout({ children }: { children: JSX.Element }) {
       <main className="min-h-screen bg-background text-foreground">
         <NavigationBar />
         {children}
+        <Footer />
       </main>
     </div>
   );

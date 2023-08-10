@@ -13,10 +13,13 @@ export const productRouter = createTRPCRouter({
       });
     }),
   getOne: publicProcedure
-    .input(z.object({ id: z.string() }))
+    .input(z.object({ id: z.string().default("") }))
     .query(async ({ input, ctx }) => {
+      if (input.id == "") return undefined;
+
       return await ctx.prisma.product.findUnique({
         where: { id: input.id },
+        include: { reviews: true },
       });
     }),
 });
