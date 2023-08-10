@@ -18,7 +18,7 @@ export default function ProductPage() {
 
   return (
     <Layout>
-      <div className="mx-auto min-h-screen max-w-[95vw]">
+      <div className="mx-auto max-w-[95vw]">
         <div className="grid justify-items-center gap-5 md:grid-cols-2 md:gap-0">
           <img
             src={product?.images}
