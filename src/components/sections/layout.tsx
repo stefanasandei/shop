@@ -3,7 +3,7 @@ import NavigationBar from "./navbar";
 
 export default function Layout({ children }: { children: JSX.Element }) {
   return (
-    <>
+    <div className="dark">
       <Head>
         <title>Shop</title>
         <meta
@@ -12,10 +12,10 @@ export default function Layout({ children }: { children: JSX.Element }) {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="dark min-h-screen bg-background text-foreground">
+      <main className="min-h-screen bg-background text-foreground">
         <NavigationBar />
         {children}
       </main>
-    </>
+    </div>
   );
 }

@@ -15,7 +15,11 @@ export default function HomePage() {
 
   return (
     <Layout>
-      <div className="grid grid-flow-row grid-cols-4 gap-5">
+      <div
+        className="mx-3 grid grid-flow-row grid-cols-2 justify-items-stretch 
+                      gap-x-3 gap-y-10 sm:grid-cols-4 sm:justify-items-center
+                      md:mx-auto md:max-w-[95vw] md:gap-x-0"
+      >
         {products?.map((product) => (
           <Card key={product.id} product={product} />
         ))}
