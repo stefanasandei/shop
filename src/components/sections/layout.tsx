@@ -12,7 +12,7 @@ export default function Layout({ children }: { children: JSX.Element }) {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <main className="dark min-h-screen bg-background text-foreground">
         <NavigationBar />
         {children}
       </main>
