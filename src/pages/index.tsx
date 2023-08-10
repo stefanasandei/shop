@@ -1,16 +1,13 @@
 import Layout from "@/components/sections/layout";
 import { Card } from "@/components/ui/card";
+import { LoadingSection } from "@/components/ui/spinner";
 import { api } from "@/utils/api";
 
 export default function HomePage() {
   const { isLoading, data: products } = api.product.getAll.useQuery({});
 
   if (isLoading) {
-    return (
-      <Layout>
-        <p>loading...</p>
-      </Layout>
-    );
+    return <LoadingSection />;
   }
 
   return (

@@ -5,6 +5,7 @@ import { api } from "@/utils/api";
 import { useRouter } from "next/router";
 import { ShoppingCart } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import { LoadingSection } from "@/components/ui/spinner";
 
 export default function ProductPage() {
   const router = useRouter();
@@ -13,12 +14,7 @@ export default function ProductPage() {
     id: router.query.id?.toString(),
   });
 
-  if (isLoading)
-    return (
-      <Layout>
-        <p className="min-h-screen">loading...</p>
-      </Layout>
-    );
+  if (isLoading) return <LoadingSection />;
 
   return (
     <Layout>
