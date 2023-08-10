@@ -1,9 +1,9 @@
 import Layout from "@/components/sections/layout";
 
-export default function HomePage() {
+export default function AboutPage() {
   return (
     <Layout>
-      <p>shop</p>
+      <p>about</p>
     </Layout>
   );
 }
